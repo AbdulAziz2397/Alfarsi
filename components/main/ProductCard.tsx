@@ -37,7 +37,6 @@ const ProductCard = ({ product }: { product: any }) => (
 );
 
 export default function ProductCarousel({ products }: { products: any[] }) {
-  // Issue 2 & 3 Fix: Unique Refs for Navigation and Pagination
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const paginationRef = useRef(null);

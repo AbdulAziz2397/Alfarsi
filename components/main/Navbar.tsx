@@ -7,7 +7,7 @@ import SearchDrawer from '../main/SearchDrawer';
 
 export default function Navbar() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [expandedMenu, setExpandedMenu] = useState(null);
+    const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
     const [isLoginDrawerOpen, setIsLoginDrawerOpen] = useState(false);
     const [isSearchDrawerOpen, setIsSearchDrawerOpen] = useState(false);
 
@@ -35,7 +35,7 @@ export default function Navbar() {
     ];
 
     const toggleSubMenu = (name: string) => {
-        setExpandedMenu(expandedMenu === name ? null : name);
+       setExpandedMenu(prev => (prev === name ? null : name));
     };
 
     const hasSubMenu = (link: any) => link.subMenu && link.subMenu.length > 0;
