@@ -1,4 +1,4 @@
-import React from 'react';
+"use client";
 import Link from 'next/link';
 import { Facebook, Twitter, Youtube, Instagram } from 'lucide-react';
 

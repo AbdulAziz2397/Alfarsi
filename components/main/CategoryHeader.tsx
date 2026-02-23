@@ -1,7 +1,6 @@
 import DividerIcon from '@/public/assets/icons/DividerIcon'
-import React from 'react'
 
-export default function CategoryHeader({ title, subtitle }) {
+export default function CategoryHeader({ title, subtitle }: { title: string, subtitle?: string }) {
     return (
         <div className="flex flex-col items-center justify-center py-8 md:py-12 xl:py-16 px-4 bg-white text-center">
             {/* Subtitle */}

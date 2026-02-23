@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Search } from "lucide-react";
 
-export default function SearchDrawer({ isOpen, setIsOpen }) {
+export default function SearchDrawer({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (isOpen: boolean) => void }) {
   return (
     <AnimatePresence>
       {isOpen && (

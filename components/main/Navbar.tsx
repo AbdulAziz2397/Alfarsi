@@ -34,11 +34,11 @@ export default function Navbar() {
         },
     ];
 
-    const toggleSubMenu = (name) => {
+    const toggleSubMenu = (name: string) => {
         setExpandedMenu(expandedMenu === name ? null : name);
     };
 
-    const hasSubMenu = (link) => link.subMenu && link.subMenu.length > 0;
+    const hasSubMenu = (link: any) => link.subMenu && link.subMenu.length > 0;
 
     return (
         <nav className="bg-[#0a0c10] text-white px-4 md:px-6 xl:px-8 py-4 border-b border-gray-800 sticky top-0 z-50">
@@ -69,7 +69,7 @@ export default function Navbar() {
                             {hasSubMenu(link) && (
                                 <div className="absolute top-full left-0 pt-4 hidden group-hover:block">
                                     <div className="bg-white text-gray-900 shadow-xl py-4 w-48 border-t-2 border-teal-600">
-                                        {link.subMenu.map((sub) => (
+                                        {link.subMenu?.map((sub) => (
                                             <Link key={sub.name} href={sub.href} className="block px-6 py-2 hover:bg-gray-100 text-xs font-semibold">
                                                 {sub.name}
                                             </Link>

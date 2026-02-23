@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const ProductCard = ({ product }) => (
+const ProductCard = ({ product }: { product: any }) => (
   <div className="flex flex-col items-center group px-2 pb-10">
     <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden cursor-pointer">
       <Image
@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-export default function ProductCarousel({ products }) {
+export default function ProductCarousel({ products }: { products: any[] }) {
   // Issue 2 & 3 Fix: Unique Refs for Navigation and Pagination
   const prevRef = useRef(null);
   const nextRef = useRef(null);

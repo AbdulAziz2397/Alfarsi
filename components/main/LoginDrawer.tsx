@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Eye, UserRound } from "lucide-react";
 
-export default function LoginDrawer({ isOpen, setIsOpen }) {
+export default function LoginDrawer({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (isOpen: boolean) => void }) {
   return (
     <AnimatePresence>
       {isOpen && (

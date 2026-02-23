@@ -1,5 +1,4 @@
 "use client";
-import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Bell } from 'lucide-react';
 import DividerIcon from '@/public/assets/icons/DividerIcon';
