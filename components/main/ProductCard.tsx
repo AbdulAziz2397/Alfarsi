@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ProductCard = ({ product }) => (
-  // Issue 1 Fix: Added "group" to the parent and hover effects only to specific children
   <div className="flex flex-col items-center group px-2 pb-10">
     <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden cursor-pointer">
       <Image
@@ -18,7 +17,7 @@ const ProductCard = ({ product }) => (
         alt={product.name}
         fill
         sizes="(max-width: 768px) 100vw, 25vw"
-        className="object-contain transition-transform duration-500 group-hover:scale-105"
+        className="object-contain transition-transform duration-300 group-hover:scale-110"
       />
     </div>
     

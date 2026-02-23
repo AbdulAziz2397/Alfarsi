@@ -1,4 +1,3 @@
-import BestSellerCarousel from "@/components/home/BestSeller";
 import ClocksFeature from "@/components/home/ClockFeature";
 import CollectionFeature from "@/components/home/CollectionFeature";
 import CollectionTabs from "@/components/home/CollectionTabs";

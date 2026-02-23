@@ -72,10 +72,10 @@ const digital_clocks = [
 export default function page() {
   return (
     <div>
-      <HeroBanner />
-      <CategoryHeader subtitle="Elegance and more" title="ANA-DIGI CLOCKS" />
+      <HeroBanner title={"Caps"} />
+      <CategoryHeader subtitle="Elegance and more" title="Al Marwan" />
       <ProductCard products={ana_digi_clocks} />
-      <CategoryHeader subtitle="With all details" title="DIGITAL CLOCKS" />
+      <CategoryHeader subtitle="With all details" title="Al Fatih" />
       <ProductCard products={digital_clocks} />
     </div>
   )

@@ -12,7 +12,7 @@ export default function Hero(){
         <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0 animate-in fade-in slide-in-from-left-8 duration-1000">
           <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px]">
             <Image
-              src="/assets/images/download.webp" // Replace with your image path
+              src="/assets/images/Black-Bord-clock.webp"
               alt="Makkah Clock Inspired by Ka'aba Kiswa"
               fill
               priority
