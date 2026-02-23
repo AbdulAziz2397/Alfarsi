@@ -20,11 +20,11 @@ const ProductCard = ({ product }: { product: any }) => (
         className="object-contain transition-transform duration-300 group-hover:scale-110"
       />
     </div>
-    
+
     <h3 className="text-gray-800 text-lg font-medium mb-2 text-center line-clamp-1">
       {product.name}
     </h3>
-    
+
     <div className="flex items-center text-[#1a8a77] font-bold text-xl mb-6">
       <span>{product.price}</span>
       <span className="ml-2 text-2xl font-serif">﷼</span>
@@ -47,7 +47,7 @@ export default function ProductCarousel({ products }: { products: any[] }) {
   return (
     <section className="bg-white px-4 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto relative">
-        
+
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={30}
@@ -57,7 +57,7 @@ export default function ProductCarousel({ products }: { products: any[] }) {
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          pagination={{ 
+          pagination={{
             el: paginationRef.current,
             clickable: true,
             bulletClass: 'swiper-pagination-bullet !bg-gray-300 !opacity-100 !w-2 !h-2 !mx-1',
@@ -65,9 +65,22 @@ export default function ProductCarousel({ products }: { products: any[] }) {
           }}
           // Re-run initialization when refs are assigned
           onSwiper={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.params.pagination.el = paginationRef.current;
+            const nav = swiper.params?.navigation as any | undefined;
+            const pag = swiper.params?.pagination as any | undefined;
+
+            if (nav) {
+              nav.prevEl = prevRef.current;
+              nav.nextEl = nextRef.current;
+            }
+
+            if (pag) {
+              pag.el = paginationRef.current;
+            }
+
+            if (swiper.navigation) {
+              swiper.navigation.init();
+            }
+
             swiper.navigation.init();
             swiper.navigation.update();
             swiper.pagination.init();
@@ -89,13 +102,13 @@ export default function ProductCarousel({ products }: { products: any[] }) {
         </Swiper>
 
         {/* Navigation Arrows with Refs */}
-        <button 
+        <button
           ref={prevRef}
           className="absolute cursor-pointer left-[-60px] top-[40%] -translate-y-1/2 z-30 p-2 text-gray-300 hover:text-black transition-colors hidden xl:block disabled:opacity-0"
         >
           <ChevronLeft size={56} strokeWidth={1} />
         </button>
-        <button 
+        <button
           ref={nextRef}
           className="absolute cursor-pointer right-[-60px] top-[40%] -translate-y-1/2 z-30 p-2 text-gray-300 hover:text-black transition-colors hidden xl:block disabled:opacity-0"
         >
