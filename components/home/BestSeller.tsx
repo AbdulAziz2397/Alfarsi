@@ -7,13 +7,9 @@ import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import DividerIcon from '@/public/assets/icons/DividerIcon';
 
-const bestSellers = [
-  { id: 1, name: 'Sport Watch WY-16', price: '190', img: '/assest/images/p-1.webp' },
-  { id: 2, name: 'Alfajr Desk Clock CF-19', price: '190', img: '/assest/images/p-1.webp' },
-  { id: 3, name: 'Wall Clock CR-23', price: '380', img: '/assest/images/p-1.webp' },
-  { id: 4, name: 'Alfajr Wall Clock CJ-17', price: '390', img: '/assest/images/p-1.webp' },
-];
+
 
 export default function BestSellerCarousel() {
   return (
@@ -28,15 +24,7 @@ export default function BestSellerCarousel() {
           
           {/* Decorative Divider */}
           <div className="flex items-center w-full max-w-[300px]">
-            <div className="flex-grow h-[1px] bg-[#003d4d]/20"></div>
-            <div className="mx-3 flex items-center space-x-1">
-              <span className="w-1 h-1 bg-[#003d4d] rounded-full"></span>
-              <div className="w-4 h-4 border border-[#003d4d] rotate-45 flex items-center justify-center">
-                 <div className="w-2 h-2 border border-[#003d4d]"></div>
-              </div>
-              <span className="w-1 h-1 bg-[#003d4d] rounded-full"></span>
-            </div>
-            <div className="flex-grow h-[1px] bg-[#003d4d]/20"></div>
+            <DividerIcon />
           </div>
         </div>
 
@@ -80,7 +68,7 @@ export default function BestSellerCarousel() {
                 </div>
 
                 {/* Button */}
-                <button className="w-full border border-gray-800 py-3 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all cursor-pointer">
+                <button className="w-full border border-black py-3 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-black text-black hover:text-white transition-all duration-300 cursor-pointer">
                   Select Options
                 </button>
               </div>

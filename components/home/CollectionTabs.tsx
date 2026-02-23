@@ -12,8 +12,8 @@ export default function CollectionTabs() {
   ];
 
   return (
-    <section className="bg-white py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white px-4">
+      <div className="container mx-auto">
         <div className="flex flex-wrap justify-center gap-4">
           {tabs.map((tab) => (
             <button
@@ -30,14 +30,6 @@ export default function CollectionTabs() {
               {tab}
             </button>
           ))}
-        </div>
-
-        {/* --- OPTIONAL: Tab Content Area --- */}
-        <div className="mt-16 text-center animate-in fade-in zoom-in duration-500">
-          <h3 className="text-2xl font-light text-[#003d4d] uppercase tracking-widest">
-            {activeTab}
-          </h3>
-          <p className="text-gray-500 mt-2">Displaying products for {activeTab}...</p>
         </div>
       </div>
     </section>

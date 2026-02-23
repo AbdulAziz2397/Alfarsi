@@ -7,7 +7,7 @@ export default function ClocksFeature() {
       {/* --- BACKGROUND IMAGE --- */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/clocks-background.jpg" // Replace with your actual background image
+          src="/assets/images/clocks-feature-bg.webp"
           alt="Alfajr Clock Collection"
           fill
           className="object-cover object-right md:object-center"

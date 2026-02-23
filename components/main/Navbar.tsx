@@ -98,9 +98,9 @@ const Navbar = () => {
                 {/* --- LOGO (Center) --- */}
                 <div className="flex flex-col items-center flex-1">
                     <Link href='/' className="flex items-center">
-                        <span className="text-xl md:text-2xl font-bold tracking-tighter">ALFAJR</span>
+                        <span className="text-xl md:text-2xl font-bold tracking-tighter">Alfarsi</span>
                         <div className="flex items-center">
-                            <span className="text-2xl md:text-3xl font-serif text-white ml-2">الفجر</span>
+                            <span className="text-2xl md:text-3xl font-serif text-white ml-2">الفارسی</span>
                             <div className="w-2 h-2 bg-orange-600 rounded-full mb-4 -ml-1"></div>
                         </div>
                     </Link>
