@@ -134,7 +134,6 @@ export default function Navbar() {
                 <div className="flex-1 overflow-y-auto">
                     {navLinks.map((link) => (
                         <div key={link.name} className="border-b border-gray-50">
-                            {/* FIX 3: If no subMenu, render a Link. If subMenu exists, render a Toggle Button */}
                             {!hasSubMenu(link) ? (
                                 <Link
                                     href={link.href}
@@ -162,7 +161,8 @@ export default function Navbar() {
                                         bg-gray-50 overflow-hidden transition-all duration-300 ease-in-out
                                         ${expandedMenu === link.name ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}
                                     `}>
-                                        {link.subMenu.map((sub) => (
+                                        
+                                        {link.subMenu?.map((sub) => (
                                             <Link
                                                 key={sub.name}
                                                 href={sub.href}
