@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ProductCard = ({ product }: { product: any }) => (
-  <div className="flex flex-col items-center group px-2 pb-4">
+  <a href='/product-details' className="flex flex-col items-center group px-2 pb-4">
     <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden cursor-pointer">
       <Image
         src={product.img}
@@ -33,7 +33,7 @@ const ProductCard = ({ product }: { product: any }) => (
     <button className="w-full border border-black py-3 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-black text-black hover:text-white transition-all duration-300">
       {product.price.includes('-') ? 'Select Options' : 'Add to Cart'}
     </button>
-  </div>
+  </a>
 );
 
 export default function ProductCarousel({ products }: { products: any[] }) {
