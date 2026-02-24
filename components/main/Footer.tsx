@@ -11,7 +11,7 @@ export default function Footer(){
   };
 
   return (
-    <footer className="relative w-full bg-[#1a7a5a] text-white pt-16 pb-8 overflow-hidden">
+    <footer className="relative w-full bg-[#1a7a5a] text-white mt-28 pt-16 pb-8 overflow-hidden">
       {/* Background Pattern Overlay */}
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/path-to-your-pattern.png')] bg-repeat" />
 

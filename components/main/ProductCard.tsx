@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ProductCard = ({ product }: { product: any }) => (
-  <div className="flex flex-col items-center group px-2 pb-10">
+  <div className="flex flex-col items-center group px-2 pb-4">
     <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden cursor-pointer">
       <Image
         src={product.img}
@@ -116,7 +116,7 @@ export default function ProductCarousel({ products }: { products: any[] }) {
         </button>
 
         {/* Pagination Dots with Ref */}
-        <div ref={paginationRef} className="flex justify-center mt-10 space-x-2"></div>
+        <div ref={paginationRef} className="flex justify-center my-10 space-x-2"></div>
 
       </div>
     </section>

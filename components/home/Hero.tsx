@@ -22,7 +22,7 @@ export default function Hero(){
         </div>
 
         {/* --- TEXT CONTENT --- */}
-        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start space-y-6">
+        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start space-y-6 pb-10">
           <div className="uppercase tracking-[0.2em]">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-light text-[#c5a367] leading-none">
               MAKKAH
